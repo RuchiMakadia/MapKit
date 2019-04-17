@@ -14,6 +14,7 @@
 		AB39CC722233937300C8A5CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB39CC702233937300C8A5CF /* LaunchScreen.storyboard */; };
 		AB39CC7D2233937300C8A5CF /* mkitpathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB39CC7C2233937300C8A5CF /* mkitpathTests.swift */; };
 		AB39CC882233937300C8A5CF /* mkitpathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB39CC872233937300C8A5CF /* mkitpathUITests.swift */; };
+		AB39CC9722339D4700C8A5CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB39CC9622339D4700C8A5CF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AB39CC832233937300C8A5CF /* mkitpathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkitpathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB39CC872233937300C8A5CF /* mkitpathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mkitpathUITests.swift; sourceTree = "<group>"; };
 		AB39CC892233937300C8A5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB39CC9622339D4700C8A5CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB39CC9722339D4700C8A5CF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				AB39CC7B2233937300C8A5CF /* mkitpathTests */,
 				AB39CC862233937300C8A5CF /* mkitpathUITests */,
 				AB39CC652233937100C8A5CF /* Products */,
+				AB39CC9522339D4700C8A5CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				AB39CC892233937300C8A5CF /* Info.plist */,
 			);
 			path = mkitpathUITests;
+			sourceTree = "<group>";
+		};
+		AB39CC9522339D4700C8A5CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB39CC9622339D4700C8A5CF /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +205,11 @@
 				TargetAttributes = {
 					AB39CC632233937100C8A5CF = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AB39CC772233937300C8A5CF = {
 						CreatedOnToolsVersion = 9.4;
@@ -430,7 +447,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CPX4Q57Z73;
 				INFOPLIST_FILE = mkitpath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,6 +456,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehs.mkitpath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1283088f-805a-4c74-8623-09f30b57cb84";
+				PROVISIONING_PROFILE_SPECIFIER = "test app dev";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +467,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CPX4Q57Z73;
 				INFOPLIST_FILE = mkitpath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +476,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehs.mkitpath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1283088f-805a-4c74-8623-09f30b57cb84";
+				PROVISIONING_PROFILE_SPECIFIER = "test app dev";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
